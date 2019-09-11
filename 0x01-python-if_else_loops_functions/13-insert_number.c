@@ -37,14 +37,11 @@ listint_t *insert_node(listint_t **head, int number)
 	listint_t *copy = *head;
 	int auxvalue = 0, i = 0;
 
+	if (head == NULL)
+		return (NULL);
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
-	if (head == NULL)
-	{
-		new = add_nodeint(head, number);
-		return (new);
-	}
 	while (copy->next != NULL)
 	{
 		auxvalue = copy->next->n;
