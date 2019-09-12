@@ -6,7 +6,7 @@ if __name__ == "__main__":
     signes = "+-*/"
     signe = ""
     if (len(argv) - 1) != 3:
-        print("Usage: ./100-my_calculator.py <a> <operator>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     vsigne = argv[2] in signes
     if (vsigne):
