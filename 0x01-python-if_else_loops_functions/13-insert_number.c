@@ -53,7 +53,7 @@ listint_t *insert_node(listint_t **head, int number)
 			copy->next = new;
 			return (new);
 		}
-		else if (auxvalue >= number && i == 0)
+		else if (auxvalue >= number && i == 0 || copy == NULL)
 		{
 			new->next = *head;
 			*head = new;
