@@ -12,4 +12,4 @@ else:
 for i in sys.argv:
     if i != sys.argv[0]:
         print("{:d}: {}".format(j, i))
-    j += 11
+    j += 1
