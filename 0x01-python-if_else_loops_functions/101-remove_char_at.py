@@ -5,5 +5,5 @@ def remove_char_at(str, n):
     for character in str[:]:
         if i != n:
             copy = copy + character
-            i = i + 1
+        i = i + 1
     return copy
