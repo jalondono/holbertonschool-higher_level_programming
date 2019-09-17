@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 		size++;
 	}
 	size -= 1;
-	while ((size - 0) > l)
+	while ((size - 1) > l)
 	{
 		if (value[l++] != value[size--])
 			return (0);
