@@ -7,7 +7,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *copy = *head;
-	int value[1024];
+	int value[10000];
 	int size = 0;
 	int l = 0;
 
@@ -23,7 +23,7 @@ int is_palindrome(listint_t **head)
 		size++;
 	}
 	size -= 1;
-	while ((size - 1) > l)
+	while ((size) > l)
 	{
 		if (value[l++] != value[size--])
 			return (0);
