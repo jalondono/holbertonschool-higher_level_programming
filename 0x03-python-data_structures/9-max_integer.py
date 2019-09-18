@@ -2,10 +2,9 @@
 def max_integer(my_list=[]):
     if my_list is None:
         return None
-    for currmax in my_list:
-        for i, data in enumerate(my_list):
-            if data > currmax:
-                break
-            if i == len(my_list) - 1:
-                return currmax
+    max = my_list[0]
+    for i, data in enumerate(my_list):
+        if i > max:
+            max = i
+    return currmax
     return 0
