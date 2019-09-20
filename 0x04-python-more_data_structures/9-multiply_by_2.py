@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def multiply_by_2(a_dictionary):
-    if a_dictionary is None:
+    if len(a_dictionary) == 0:
         return None
     newdic = a_dictionary.copy()
     for i in newdic:
