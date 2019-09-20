@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if roman_string is None or not type(roman_string) is str:
-        return None
+        return 0
+
     acum = 0
     anterior = 0
     j = 0
