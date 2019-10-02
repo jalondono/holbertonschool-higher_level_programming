@@ -8,6 +8,7 @@ class Square:
                 Raises:
                     - TypeError: must be an int
                     - ValueError: must be >= 0
+                    - TypeError: if not a tuple of 2 positive integers
         """
         if position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -40,10 +41,14 @@ class Square:
 
     @property
     def position(self):
-        """ return size
-                    Return:
-                        - size
-                """
+        """Returns position of the square
+               position.setter:
+                   resets the position of the square
+               Args:
+                   value(int): size of the square
+               Raises:
+                   TypeError: if not a tuple of 2 positive integers
+        """
         return self.__position
 
     @position.setter
@@ -65,7 +70,12 @@ class Square:
         return int(self.__size) * int(self.__size)
 
     def my_print(self):
-        """print a square in the stdout
+        """ Prints a square of a certain size at a position
+               self.size:
+                   calls size from the getter
+               note:
+                   if you have a setter and getter you don't need to interact
+                   with private so that you don't mess up the values
         """
         if self.__size == 0:
             print()
