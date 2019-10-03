@@ -1,14 +1,38 @@
-Now we're going to take some more of doctest's syntax for a spin.
->>> def test_write():
-...     print("Hello\n", end='')
-...     return True
->>> test_write()
-Hello
-True
+The ``0-add_integer`` module
+======================
 
-This is a simple doctest that checks some of Python's arithmetic
- operations.
->>> 2 + 2
-4
->>> 3 * 3
-9
+Using ``add_integer``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+add_integer from the 0-add_integer module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+    case 0 : two integers
+    >>> add_integer(5,5)
+    10
+
+    case 1: one integer
+    >>> add_integer(2)
+    100
+
+    case 2: empty function
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    case 3: string like argument
+    >>> add_integer("5")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> type(add_integer(2, 3.2))
+    <class 'int'>
+
+    >>> type(add_integer(2, 3))
+    <class 'int'>
+
