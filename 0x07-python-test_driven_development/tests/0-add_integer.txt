@@ -1,0 +1,14 @@
+Now we're going to take some more of doctest's syntax for a spin.
+>>> def test_write():
+...     print("Hello\n", end='')
+...     return True
+>>> test_write()
+Hello
+True
+
+This is a simple doctest that checks some of Python's arithmetic
+ operations.
+>>> 2 + 2
+4
+>>> 3 * 3
+9
