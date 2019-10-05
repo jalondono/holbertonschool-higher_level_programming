@@ -12,16 +12,16 @@ def text_indentation(text):
        Args:  text is the text to be printed
        Prints:  text """
 
-    caracteres = ['?', '.', ':']
+    characters = ['?', '.', ':']
     string = ""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for idx, chara in enumerate(text):
 
-        if chara in caracteres:
+        if chara in characters:
             string += text[idx] + "\n\n"
         else:
-            if ((idx != 0 and text[idx - 1] in caracteres) and text[idx] == ' ') or\
+            if ((idx != 0 and text[idx - 1] in characters) and text[idx] == ' ') or\
                     text[idx] == ' ' and text[idx - 1] == ' ':
                 pass
             else:
