@@ -1,80 +1,50 @@
 The ``3-say_my_name`` module
-===============================
+============================
 
-Using ``say_my_name`` function
-------------------------------
+Using ``say_my_name``
+---------------------
 
-First import ``say_my_name`` from the ``3-say_my_name`` module:
+Import ``say_my_name`` from the ``3-say_my_name`` module
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-Now use it:
+`first_name` should be of type str:
 
-    1. Correct output
+    >>> say_my_name(["string"], "Huxtable")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
 
-        >>> say_my_name("Manuel", "Smith")
-        My name is Manuel Smith
+`last_name` should be of type str:
 
-    2. Correct output only first name
+    >>> say_my_name("Theodore", 123)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
 
-        >>> say_my_name("David")
-        My name is David
+Should print 'My name is ' followed by full name:
 
-    3. Without anything
+    >>> say_my_name("Theo", "Huxtable")
+    My name is Theo Huxtable
 
-        >>> say_my_name()
-        Traceback (most recent call last):
-        ...
-        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+Should print full name with extra whitespace:
 
-    4. Empty string
+    >>> say_my_name(" Theo ", " Huxtable ")
+    My name is  Theo   Huxtable
 
-        >>> say_my_name("")
-        My name is
+If only one argument is given, it should be first_name, followed by a space:
 
-    5. Integer as first name
+    >>> say_my_name("Theo")
+    My name is Theo
 
-        >>> say_my_name(122343)
-        Traceback (most recent call last):
-        ...
-        TypeError: first_name must be a string
+Should print names with unicode characters:
 
-    6. Integer as last name
+    >>> say_my_name("")
+    My name is
 
-        >>> say_my_name("Juan", 5436356)
-        Traceback (most recent call last):
-        ...
-        TypeError: last_name must be a string
+Should raise Exception if no arguments are given:
 
-    7. 'Name' as parameter
-
-        >>> say_my_name(Camilo)
-        Traceback (most recent call last):
-        ...
-        NameError: name 'Camilo' is not defined
-
-     8. None as parameter
-
-        >>> say_my_name(None)
-        Traceback (most recent call last):
-        ...
-        TypeError: first_name must be a string
-
-     9. None as parameter
-
-        >>> say_my_name("Alejandro", None)
-        Traceback (most recent call last):
-        ...
-        TypeError: last_name must be a string
-
-    10. None as parameter
-
-        >>> say_my_name(None, None)
-        Traceback (most recent call last):
-        ...
-        TypeError: first_name must be a string
-
-    11. Empty last name
-
-        >>> say_my_name("Alex", "")
-        My name is Alex
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'

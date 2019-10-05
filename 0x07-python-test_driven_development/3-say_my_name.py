@@ -1,18 +1,29 @@
 #!/usr/bin/python3
-"""Module to print My name is <first name> <last name>
-    Args:
-        first name (str): first string
-        last name (str): second string
+
+
+"""
+say_my_name module:
+contains a function that prints "My name is"
 """
 
 
 def say_my_name(first_name, last_name=""):
-    """Function that prints My name is <first name> <last name>
-        Return: printed name
     """
-    if not isinstance(first_name, str):
+    prints "My name is"
+    Parameters
+    ----------
+    first_name : string
+    last_name : string
+    Returns
+    -------
+    Nothing. Just prints a string.
+    """
+
+    # first_name and last_name should be strings
+    if type(first_name) is not str:
         raise TypeError('first_name must be a string')
-    if not isinstance(last_name, str):
+    elif type(last_name) is not str:
         raise TypeError('last_name must be a string')
 
+    # if no last_name is given, don't print the space after first_name
     print('My name is' + ' ' + first_name + ' ' + last_name)
