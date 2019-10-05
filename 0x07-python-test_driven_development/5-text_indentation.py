@@ -7,13 +7,15 @@ The 5-text_indentation module supplies one function, text_indentation(text).
 
 
 def text_indentation(text):
+
     """text_indentation function
        Args:  text is the text to be printed
        Prints:  text """
-    if not isinstance(text, str):
-        raise TypeError("text must be a string")
+
     caracteres = ['?', '.', ':']
     string = ""
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
     for idx, chara in enumerate(text):
 
         if chara in caracteres:
