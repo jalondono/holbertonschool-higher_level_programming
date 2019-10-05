@@ -30,9 +30,23 @@ Now use it:
         ...
     TypeError: a must be an integer
 
+    case 4: add an int and float
     >>> type(add_integer(2, 3.2))
     <class 'int'>
 
+    case 5: add two integers
     >>> type(add_integer(2, 3))
     <class 'int'>
+
+    case 6: Infinite float
+    >>> add_integer(float('nan'), 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+    case 7: Infinite float
+    >>> add_integer(float('-inf'), float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
 
