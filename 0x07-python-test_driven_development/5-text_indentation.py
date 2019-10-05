@@ -19,10 +19,10 @@ def text_indentation(text):
         if chara in caracteres:
             string += text[idx] + "\n\n"
         else:
-            if (idx != 0 and text[idx - 1] in caracteres) and text[idx] == ' ':
+            if ((idx != 0 and text[idx - 1] in caracteres) and text[idx] == ' ') or\
+                    text[idx] == ' ' and text[idx - 1] == ' ':
                 pass
             else:
                 string += chara
 
     print(string, end='')
-
