@@ -24,5 +24,4 @@ def text_indentation(text):
                 pass
             else:
                 string += chara
-
     print(string, end='')
