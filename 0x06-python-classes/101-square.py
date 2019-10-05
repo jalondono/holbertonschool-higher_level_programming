@@ -66,11 +66,11 @@ class Square:
 
     def __str__(self):
         """ Prints a square of a certain size at a position
-                       self.size:
-                           calls size from the getter
-                       note:
-                           if you have a setter and getter you don't need to interact
-                           with private so that you don't mess up the values
+            self.size:
+                calls size from the getter
+            note:
+                if you have a setter and getter you don't need to interact
+                with private so that you don't mess up the values
                 """
         if self.__size == 0:
             return ''
