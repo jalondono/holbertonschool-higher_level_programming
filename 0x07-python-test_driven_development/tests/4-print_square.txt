@@ -24,10 +24,6 @@ print_square from the 4-print_square module:
     ####
     ####
 
-    01 zero size
-    >>> print_square(0)
-    <BLANKLINE>
-
     01 Negative size
     >>> print_square(-689)
     Traceback (most recent call last):
