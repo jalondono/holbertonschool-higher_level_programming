@@ -36,3 +36,6 @@ print_square from the 4-print_square module:
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
+
+        01 zero size
+    >>> print_square(0)
