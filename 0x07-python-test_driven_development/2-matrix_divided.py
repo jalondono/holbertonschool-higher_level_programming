@@ -18,7 +18,7 @@ def matrix_divided(matrix, div):
     newlist = []
     templist = []
     flag = 0
-    err = "Each row of the matrix must have the same size"
+    err = "matrix must be a matrix (list of lists) of integers/floats"
     if type(div) is not float and type(div) is not int:
         raise TypeError("div must be a number")
     if div == 0:
@@ -29,13 +29,13 @@ def matrix_divided(matrix, div):
             raise TypeError(message)
 
         if len(matrix[0]) != len(row):
-            raise TypeError(err)
+            raise TypeError("Each row of the matrix must have the same size")
         templist.clear()
         for idx, data in enumerate(row):
             if type(data) is float or type(data) is int:
                 templist.append(round((data / div), 2))
             else:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(err)
         newlist.append(templist.copy())
 
     return newlist
