@@ -9,30 +9,71 @@ say_my_name from the 3-say_my_name module:
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-    case 0 : call de function without arguments
-    >>> say_my_name()
-    Traceback (most recent call last):
+        1. Correct output
+
+        >>> say_my_name("Manuel", "Smith")
+        My name is Manuel Smith
+
+    2. Correct output only first name
+
+        >>> say_my_name("David")
+        My name is David
+
+    3. Without anything
+
+        >>> say_my_name()
+        Traceback (most recent call last):
         ...
-    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
-    Test cases:
+    4. Empty string
 
-    01 Correct input
-    >>> say_my_name("John", "Smith")
-    My name is John Smith
+        >>> say_my_name("")
+        My name is
 
-    01 Non string first name
-    >>> say_my_name("John")
-    My name is John
+    5. Integer as first name
 
-    01 Non string first name
-    >>> say_my_name(200, "Smith")
-    Traceback (most recent call last):
-    ...
-    TypeError: first_name must be a string
+        >>> say_my_name(122343)
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
 
-    01 Non string first name
-    >>> say_my_name("John", 200)
-    Traceback (most recent call last):
-    ...
-    TypeError: last_name must be a string
+    6. Integer as last name
+
+        >>> say_my_name("Juan", 5436356)
+        Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+    7. 'Name' as parameter
+
+        >>> say_my_name(Camilo)
+        Traceback (most recent call last):
+        ...
+        NameError: name 'Camilo' is not defined
+
+     8. None as parameter
+
+        >>> say_my_name(None)
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+     9. None as parameter
+
+        >>> say_my_name("Alejandro", None)
+        Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+    10. None as parameter
+
+        >>> say_my_name(None, None)
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+    11. Empty last name
+
+        >>> say_my_name("Alex", "")
+        My name is Alex
