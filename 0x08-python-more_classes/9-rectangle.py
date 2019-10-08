@@ -73,7 +73,8 @@ class Rectangle:
         """return the return value
         would be a valid string object
         """
-        return "Rectangle(%d, %d)" % (self.__height, self.__width)
+        repr_str = self.__class__.__name__
+        return "{}({}, {})".format(repr_str, self.__width, self.__height)
 
     def __del__(self):
         """
@@ -95,7 +96,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if (rect_1.height * rect_1.width) > (rect_2.width * rect_2.height):
+        if (rect_1.height * rect_1.width) >= (rect_2.width * rect_2.height):
             return rect_1
         else:
             return rect_2
