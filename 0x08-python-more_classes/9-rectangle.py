@@ -5,8 +5,8 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        self.__height = height
-        self.__width = width
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -14,14 +14,12 @@ class Rectangle:
         return self.__width
 
     @width.setter
-    def width(self, width):
-        if not isinstance(width, int):
+    def width(self, value):
+        if not isinstance(value, int):
             raise TypeError('width must be an integer')
-
-        if width < 0:
+        if value < 0:
             raise ValueError('width must be >= 0')
-
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
@@ -31,10 +29,8 @@ class Rectangle:
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
-
         if value < 0:
             raise ValueError('height must be >= 0')
-
         self.__height = value
 
     def area(self):
@@ -103,8 +99,4 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        if size < 0:
-            raise ValueError('width must be >= 0')
-        if not isinstance(size, int):
-            raise TypeError('width must be an integer')
-        return cls(height=size, width=size)
+        return Rectangle(size, size)
