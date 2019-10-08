@@ -70,4 +70,5 @@ class Rectangle:
         """return the return value
         would be a valid string objec
         """
-        return "Rectangle(%d, %d)" % (self.__height, self.__width)
+        repr_str = self.__class__.__name__
+        return "{}({}, {})".format(repr_str, self.__width, self.__height)
