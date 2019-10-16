@@ -12,6 +12,7 @@ class BaseGeometry:
         not implemented
         :return:
         """
+
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -33,7 +34,27 @@ class Rectangle(BaseGeometry):
     """
 
     def __init__(self, width, height):
+        """
+        constructor method
+        :param width:
+        :param height:
+        """
         super().integer_validator("width", width)
         super().integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+    def area(self):
+        """
+        calculate the area of rectangle
+        :return: the area
+        """
+        return self.__height * self.__width
+
+    def __str__(self):
+        """
+        print in a given format
+        :return:
+        """
+        nameobj = self.__class__.__name__
+        return "[{}] {:d}/{:d}".format(nameobj, self.__width, self.__height)

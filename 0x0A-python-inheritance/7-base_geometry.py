@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+""" base class """
+
+
 class BaseGeometry:
     """
     Base class
     """
+
     def area(self):
         """
         not implemented

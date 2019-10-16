@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""class"""
+
+
 def lookup(obj):
     """"
     get list of available attributes and methods of an object:

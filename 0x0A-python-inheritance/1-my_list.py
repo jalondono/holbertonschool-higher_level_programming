@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""class"""
+
+
 class MyList(list):
     """
     class my list that inherits from list:
     """
+
     def print_sorted(self):
         """
         print a sorted list
@@ -12,6 +16,3 @@ class MyList(list):
         newlist.sort()
         print(newlist)
         return newlist
-
-
-
