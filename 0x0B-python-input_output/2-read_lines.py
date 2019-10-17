@@ -1,8 +1,6 @@
 # !/usr/bin/python3
 """Function to read a given number of lines"""
 
-number_of_lines = __import__('1-number_of_lines').number_of_lines
-
 
 def read_lines(filename="", nb_lines=0):
     """
@@ -11,10 +9,9 @@ def read_lines(filename="", nb_lines=0):
     :param nb_lines:
     :return:
     """
+    cont = 0
     with open(filename, encoding='utf-8') as myFile:
-        if nb_lines <= 0 or nb_lines >= number_of_lines(filename):
-            print(myFile.read())
-        else:
-            for i in range(0, nb_lines):
-                line = myFile.readline()
-                print(line, end='')
+        for line in myFile:
+            if (nb_lines <= 0) or (cont < nb_lines):
+                print(line, end="")
+                cont += 1
