@@ -7,11 +7,12 @@ if __name__ == "__main__":
     import sys
     import json
 
-    load_json_file = __import__('8-load_from_json_file').load_from_json_file
+    load_from_json_file = \
+        __import__('8-load_from_json_file').load_from_json_file
     save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
     filename = 'add_item.json'
     try:
-        file = load_json_file(filename)
+        file = load_from_json_file(filename)
     except:
         file = []
 
