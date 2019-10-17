@@ -1,17 +1,13 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 
 
 class Student:
-    """
-    student class
-    """
+    """Student class"""
 
     def __init__(self, first_name, last_name, age):
-        """
-            consturtor
-        """
+        """constructor"""
         self.first_name = first_name
-        self.last = last_name
+        self.last_name = last_name
         self.age = age
 
     def to_json(self):
