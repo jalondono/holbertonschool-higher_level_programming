@@ -85,6 +85,7 @@ class Rectangle(Base):
             setattr(self, var[idx], args[idx])
         if len(args) == 0:
             for idx in kwargs.keys():
-                setattr(self, idx, kwargs[idx])
+                if idx in var:
+                    setattr(self, idx, kwargs[idx])
         else:
             pass
