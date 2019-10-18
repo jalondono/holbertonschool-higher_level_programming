@@ -77,3 +77,18 @@ class Rectangle(Base):
                 else:
                     print("#", end='')
             print()
+
+    def update(self, *args):
+        for idx in range(0, len(args)):
+            if idx == 0:
+                self.id = args[idx]
+            elif idx == 1:
+                self.__width = args[idx]
+            elif idx == 2:
+                self.__height = args[idx]
+            elif idx == 3:
+                self.__x = args[idx]
+            elif idx == 4:
+                self.__y = args[idx]
+            else:
+                pass
