@@ -62,10 +62,9 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def __str__(self):
-        print("[{}] ({:d}) {:d}/{:d} - {:d}/{:d}".
-              format(self.__class__.__name__, self.id,
-                     self.__x, self.__y, self.__width, self.__height))
-        return ''
+        return "[{}] ({:d}) {:d}/{:d} - {:d}/{:d}"\
+            .format(self.__class__.__name__, self.id,
+                    self.__x, self.__y, self.__width, self.__height)
 
     def display(self):
         for verOffset in range(0, self.__y):
