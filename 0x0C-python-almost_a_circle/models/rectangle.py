@@ -60,3 +60,20 @@ class Rectangle(Base):
 
     def area(self):
         return self.__height * self.__width
+
+    def __str__(self):
+        print("[{}] ({:d}) {:d}/{:d} - {:d}/{:d}".
+              format(self.__class__.__name__, self.id,
+                     self.__x, self.__y, self.__width, self.__height))
+        return ''
+
+    def display(self):
+        for verOffset in range(0, self.__y):
+            print()
+        for vert in range(0, self.__height):
+            for horz in range(0, self.__width + self.__x):
+                if horz < self.__x:
+                    print(' ', end='')
+                else:
+                    print("#", end='')
+            print()
