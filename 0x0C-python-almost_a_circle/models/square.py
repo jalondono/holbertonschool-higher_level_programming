@@ -21,15 +21,14 @@ class Square(Rectangle):
         self.height = size
 
     def update(self, *args, **kwargs):
-        def update(self, *args, **kwargs):
-            var = ['id', 'width', 'height', 'x', 'y']
-            for idx in range(0, len(args)):
-                if idx >= len(args):
-                    break
-                setattr(self, var[idx], args[idx])
-            if len(args) == 0:
-                for idx in kwargs.keys():
-                    if idx in var:
-                        setattr(self, idx, kwargs[idx])
-            else:
-                pass
+        var = ['id', 'size', 'x', 'y']
+        for idx in range(0, len(args)):
+            if idx >= len(args):
+                break
+            setattr(self, var[idx], args[idx])
+        if len(args) == 0:
+            for idx in kwargs.keys():
+                if idx in var:
+                    setattr(self, idx, kwargs[idx])
+        else:
+            pass
