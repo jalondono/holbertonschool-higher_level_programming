@@ -32,3 +32,8 @@ class Square(Rectangle):
                     setattr(self, idx, kwargs[idx])
         else:
             pass
+
+    def to_dictionary(self):
+        keys = ['id', 'width', 'height', 'x', 'y']
+        attr = [self.id, self.width, self.height, self.x, self.y]
+        return dict(zip(keys, attr))
