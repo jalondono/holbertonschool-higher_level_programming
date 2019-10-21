@@ -22,7 +22,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         var = ['id', 'size', 'x', 'y']
-        for idx in range(0, len(args)):
+        for idx in range(min(len(args), len(var))):
             if idx >= len(args):
                 break
             setattr(self, var[idx], args[idx])
@@ -34,6 +34,6 @@ class Square(Rectangle):
             pass
 
     def to_dictionary(self):
-        keys = ['id', 'width', 'height', 'x', 'y']
-        attr = [self.id, self.width, self.height, self.x, self.y]
+        keys = ['id', 'size', 'x', 'y']
+        attr = [self.id, self.size, self.x, self.y]
         return dict(zip(keys, attr))

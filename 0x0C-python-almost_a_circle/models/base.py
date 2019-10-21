@@ -79,6 +79,6 @@ class Base:
         with open(cls.__name__ + '.csv')as myFile:
             reader = csv.DictReader(myFile, delimiter=',')
             for row in reader:
-                my_object = cls.create(**row)
-                my_list.append(my_object)
+                #my_object = cls.create(**row)
+                my_list.append(dict(row))
         return my_list

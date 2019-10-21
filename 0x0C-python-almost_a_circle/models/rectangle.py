@@ -80,7 +80,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         var = ['id', 'width', 'height', 'x', 'y']
-        for idx in range(0, len(args)):
+        for idx in range(min(len(args), len(var))):
             if idx >= len(args):
                 break
             setattr(self, var[idx], args[idx])
