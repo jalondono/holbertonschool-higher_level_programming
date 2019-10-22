@@ -60,7 +60,7 @@ class Base:
         :param json_string:
         :return:
         """
-        if json_string is None:
+        if json_string is None or len(json_string) is 0:
             return []
         return json.loads(json_string)
 
