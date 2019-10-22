@@ -2,6 +2,7 @@
 import json
 import csv
 import turtle
+import random
 
 
 class Base:
@@ -77,52 +78,59 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         my_list = []
-        with open(cls.__name__ + '.csv')as myFile:
-            reader = csv.DictReader(myFile, delimiter=',')
-            for row in reader:
-                # my_object = cls.create(**row)
-                my_list.append(dict(row))
-        return my_list
+        try:
+            with open(cls.__name__ + '.csv')as myFile:
+                reader = csv.DictReader(myFile, delimiter=',')
+                for row in reader:
+                    for key, value in row.items():
+                        row[key] = int(row[key])
+                    my_object = cls.create(**row)
+                    my_list.append(my_object)
+                return my_list
+        except:
+            return []
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        idx = 0
-        my_list = []
-        shapes_list = []
-        def draw_rectangle(width, height, x, y):
-            turtle.up()
-            turtle.goto(x, y)
-            turtle.down()
-            for i in range(2):
-                turtle.forward(width)
-                turtle.left(90)
-                turtle.forward(height)
-                turtle.left(90)
 
+        colors = ["red", "yellow", "blue", "green",
+                  "Brown", "Azure", "Ivory", "Teal",
+                  "Silver", "Purple", "Navy blue",
+                  "Gray", "Orange", "Maroon",
+                  "Aquamarine", "Coral", "Fuchsia",
+                  "Wheat", "Lime", "Crimson", "Khaki",
+                  "Hot pink", "Magenta", "Plum",
+                  "Cyan"
+                  ]
+        if list_rectangles is None:
+            return
         for rec in list_rectangles:
-            idx = 0
-            auxbook = rec.__dict__
-            if len(auxbook) < 2:
+            if rec is None:
                 continue
-            for value in auxbook.values():
-                if idx >= 1:
-                    my_list.append(value)
-                idx += 1
-            shapes_list.append(my_list.copy())
-            my_list.clear()
-        for shape in shapes_list:
-            draw_rectangle(shape[0], shape[1], shape[2], shape[3])
-
-        for rec in list_squares:
-            idx = 0
-            auxbook = rec.__dict__
-            if len(auxbook) < 1:
+            turtle.up()
+            turtle.goto(rec.x, rec.y)
+            turtle.down()
+            turtle.begin_fill()
+            turtle.fillcolor(colors[random.randint(0, len(colors) - 1)])
+            for i in range(2):
+                turtle.forward(rec.width)
+                turtle.left(90)
+                turtle.forward(rec.height)
+                turtle.left(90)
+            turtle.end_fill()
+        if list_squares is None:
+            return
+        for sqr in list_squares:
+            if sqr is None:
                 continue
-            for value in auxbook.values():
-                if idx >= 1:
-                    my_list.append(value)
-                idx += 1
-            shapes_list.append(my_list.copy())
-            my_list.clear()
-        for shape in shapes_list:
-            draw_rectangle(shape[0], shape[0], shape[1], shape[2])
+            turtle.up()
+            turtle.goto(sqr.x, sqr.y)
+            turtle.down()
+            turtle.begin_fill()
+            turtle.fillcolor(colors[random.randint(0, len(colors) - 1)])
+            for i in range(2):
+                turtle.forward(sqr.width)
+                turtle.left(90)
+                turtle.forward(sqr.width)
+                turtle.left(90)
+            turtle.end_fill()
