@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+"""
+This is the "base" module.
+It supplies one class, base.
+"""
+
 import json
 import csv
 import turtle
 import random
-
-"""
-base class
-"""
 
 
 class Base:
