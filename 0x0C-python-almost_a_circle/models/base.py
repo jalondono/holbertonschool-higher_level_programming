@@ -4,11 +4,22 @@ import csv
 import turtle
 import random
 
+"""
+base class
+"""
+
 
 class Base:
+    """
+    Base class
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        constructor class
+        :param id:
+        """
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
@@ -17,12 +28,22 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """
+        convert a json into a string
+        :param list_dictionaries:
+        :return:
+        """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        save a file
+        :param list_objs:
+        :return:
+        """
         lista = []
         with open(cls.__name__ + '.json', 'w', encoding='utf-8')as myFile:
             if list_objs is None:
@@ -33,18 +54,32 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """
+        convert a json into string
+        :param json_string:
+        :return:
+        """
         if json_string is None:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        create an instance
+        :param dictionary:
+        :return:
+        """
         dummy_instance = cls(1, 1, 0, 0)
         cls.update(dummy_instance, **dictionary)
         return dummy_instance
 
     @classmethod
     def load_from_file(cls):
+        """
+        load a dictionary from a file
+        :return:
+        """
         my_list = []
         try:
             with open(cls.__name__ + '.json', 'r', encoding="utf-8")as myFile:
@@ -60,6 +95,11 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """
+        save a dictionari into a csv file
+        :param list_objs:
+        :return:
+        """
         columnsReactangle = ['id', 'width', 'height', 'x', 'y']
         columnsSquare = ['id', 'size', 'x', 'y']
         auxdict = {}
@@ -77,6 +117,10 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """
+        load a dictionary from a csv file
+        :return:
+        """
         my_list = []
         try:
             with open(cls.__name__ + '.csv')as myFile:
@@ -92,6 +136,12 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        """
+        draw a rectangle using turtle lib
+        :param list_rectangles:
+        :param list_squares:
+        :return:
+        """
 
         colors = ["red", "yellow", "blue", "green",
                   "Brown", "Azure", "Ivory", "Teal",

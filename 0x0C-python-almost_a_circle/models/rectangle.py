@@ -1,9 +1,24 @@
 #!/usr/bin/python3
 from models.base import Base
 
+"""
+Rectangle class inherit from Base
+"""
+
 
 class Rectangle(Base):
+    """
+    Rectangle class
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        constructor method
+        :param width:
+        :param height:
+        :param x:
+        :param y:
+        :param id:
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -12,10 +27,19 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """
+        getter width
+        :return:
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """
+        setter width
+        :param value:
+        :return:
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -24,10 +48,19 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """
+        getter height
+        :return:
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """
+        setter height
+        :param value:
+        :return:
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -36,10 +69,19 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """
+        getter x
+        :return:
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """
+        setter x
+        :param value:
+        :return:
+        """
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -48,10 +90,19 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """
+        getter y
+        :return:
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """
+        setter y
+        :param value:
+        :return:
+        """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -59,15 +110,26 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """
+        return the area
+        :return:
+        """
         return self.__height * self.__width
 
     def __str__(self):
-        """end user output"""
+        """
+        print
+        :return:
+        """
         return ("[Rectangle] " + "(" + str(self.id) + ") " +
                 str(self.__x) + "/" + str(self.__y) + " - " +
                 str(self.__width) + "/" + str(self.__height))
 
     def display(self):
+        """
+        print a rectagle made with #
+        :return:
+        """
         for verOffset in range(0, self.__y):
             print()
         for vert in range(0, self.__height):
@@ -79,6 +141,12 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
+        """
+        update attributes
+        :param args:
+        :param kwargs:
+        :return:
+        """
         var = ['id', 'width', 'height', 'x', 'y']
         for idx in range(min(len(args), len(var))):
             if idx >= len(args):
@@ -92,6 +160,10 @@ class Rectangle(Base):
             pass
 
     def to_dictionary(self):
+        """
+        convert into a dictionary
+        :return:
+        """
         keys = ['id', 'width', 'height', 'x', 'y']
         attr = [self.id, self.width, self.height, self.x, self.y]
         return dict(zip(keys, attr))
