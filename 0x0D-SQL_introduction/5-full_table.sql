@@ -1,2 +1,2 @@
 -- show a definition of a table
-SHOW CREATE TABLE
+SHOW CREATE TABLE first_table;
