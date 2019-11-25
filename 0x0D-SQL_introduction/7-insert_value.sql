@@ -1,3 +1,3 @@
 -- insert a node
 INSERT INTO first_table (`id`, `name`)
-VALUES (98, "Holberton School")
+VALUES (89, "Holberton School")
