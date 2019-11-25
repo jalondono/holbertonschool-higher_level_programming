@@ -1,0 +1,1 @@
+-- Write a script that lists all records with a score >= 10
