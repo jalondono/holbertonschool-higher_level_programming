@@ -1,2 +1,2 @@
- -- to lists all genres of the show Dexter.
-SELECT name FROM tv_shows A join tv_show_genres B ON A.id = B.show_id join tv_genres C ON C.id = B.genre_id WHERE A.title = 'Dexter' ORDER BY C.name;
+-- lists all Comedy shows in the database hbtn_0d_tvshow
+SELECT title FROM tv_show_genres A join tv_genres B ON A.genre_id = B.id join tv_shows C ON C.id = A.show_id WHERE B.name = 'Comedy' ORDER BY C.title;
