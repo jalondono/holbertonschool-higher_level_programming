@@ -18,7 +18,7 @@ db = MySQLdb.connect(host='localhost',
                      db=m_db)
 cur = db.cursor()
 cur.execute("SELECT * FROM states "
-            "WHERE name LIKE '{}' "
+            "WHERE name LIKE {} "
             "ORDER BY id".format(argv[4]))
 rows = cur.fetchall()
 for data in rows:
