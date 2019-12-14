@@ -17,7 +17,9 @@ if size == 3:
                          passwd=m_passwd,
                          db=m_db)
     cur = db.cursor()
-    cur.execute("SELECT B.id, B.name, A.name FROM states A JOIN cities B ON A.id = B.state_id ORDER BY B.id")
+    cur.execute("SELECT B.id, B.name, A.name "
+                "FROM states A JOIN cities B ON A.id = B.state_id "
+                "ORDER BY B.id")
     rows = cur.fetchall()
     for data in rows:
         print(data)

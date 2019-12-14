@@ -18,7 +18,9 @@ if size == 4:
                          passwd=m_passwd,
                          db=m_db)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY id".format(argv[4]))
+    cur.execute("SELECT * FROM states "
+                "WHERE name LIKE '{}' "
+                "ORDER BY id".format(argv[4]))
     rows = cur.fetchall()
     for data in rows:
         print(data)
