@@ -13,6 +13,7 @@ if size == 3:
     m_passwd = argv[2]
     m_db = argv[3]
     db = MySQLdb.connect(host='localhost',
+                         port=3306,
                          user=m_name, passwd=m_passwd,
                          db=m_db)
     cur = db.cursor()
