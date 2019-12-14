@@ -8,7 +8,6 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-
     size = len(argv) - 1
     if size == 3:
         m_name = argv[1]
