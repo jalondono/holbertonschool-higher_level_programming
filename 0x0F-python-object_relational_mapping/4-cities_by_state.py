@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""
+lists all cities from the database hbtn_0e_4_usa
+"""
+
 import MySQLdb
 from sys import argv
 
@@ -12,3 +17,5 @@ if size == 3:
     rows = cur.fetchall()
     for data in rows:
         print(data)
+    cur.close()
+    db.close()
