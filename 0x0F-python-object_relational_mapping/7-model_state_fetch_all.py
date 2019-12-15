@@ -6,7 +6,6 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
     from sqlalchemy import asc, desc
     from model_state import Base, State
-    from sqlalchemy.ext.declarative import declarative_base
     from sqlalchemy import (create_engine)
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -16,8 +15,7 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
     states_name = session.query(State)\
-        .order_by(asc(State.id))\
-        .all()
+        .order_by(asc(State.id))
     for idx, name in enumerate(states_name):
         print("{:d}: {}".format(name.id, name.name))
     session.close()
