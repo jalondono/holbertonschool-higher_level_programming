@@ -16,17 +16,16 @@ if __name__ == "__main__":
                          passwd=m_passwd,
                          db=m_db)
     cur = db.cursor()
+    cur.execute("SELECT B.name"
+                " FROM states A JOIN cities B"
+                " ON A.id = B.state_id AND A.name = %(username)s"
+                " ORDER BY B.id", {'username': argv[4]})
 
-    cur.execute("""SELECT cities.name
-                       FROM cities JOIN states
-                       ON cities.state_id = states.id
-                       WHERE states.name = %s
-                       ORDER BY cities.id;""", (argv[4],))
     rows = cur.fetchall()
-    for row in range(len(rows)):
-        if row != len(rows) - 1:
-            print('{}, '.format(rows[row][0]), end='')
-        else:
-            print('{}'.format(rows[row][0]))
+    for index in range(len(rows)):
+        if index != 0:
+            print(', ', end='')
+        print(rows[index][0], end='')
+    print('')
     cur.close()
     db.close()
