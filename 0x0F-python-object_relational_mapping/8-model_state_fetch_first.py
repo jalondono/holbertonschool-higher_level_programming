@@ -14,9 +14,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
-    states_name = session.query(State)\
-        .order_by(asc(State.id))\
-        .limit(1)
-    for idx, name in enumerate(states_name):
-        print("{:d}: {}".format(name.id, name.name))
+    states_name = session.query(State).first()
+    if states_name is None:
+        print("Nothing")
+    else:
+        print("{:d}: {}".format(states_name.id, states_name.name))
+
     session.close()
