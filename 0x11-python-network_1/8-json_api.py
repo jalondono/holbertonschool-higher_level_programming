@@ -10,16 +10,18 @@ from sys import argv
 
 if __name__ == "__main__":
     letter = ""
-    if argv[1]:
+    if not argv[1]:
+        print("No result")
+    else:
         letter = argv[1]
-    url = 'http://0.0.0.0:5000/search_user'
-    values = {'q': letter}
-    try:
-        r = requests.post(url, values)
-        output = r.json()
-        if output:
-            print("[{}] {}".format(output.get('id'), output.get('name')))
-        else:
-            print("No result")
-    except Exception:
-        print("Not a valid JSON")
+        url = 'http://0.0.0.0:5000/search_user'
+        values = {'q': letter}
+        try:
+            r = requests.post(url, values)
+            output = r.json()
+            if output:
+                print("[{}] {}".format(output.get('id'), output.get('name')))
+            else:
+                print("No result")
+        except Exception:
+            print("Not a valid JSON")
