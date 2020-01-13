@@ -6,9 +6,9 @@ from sys import argv
 the value of the X-Request-Id"""
 
 if __name__ == "__main__":
-	url = argv[1]
-	header_tofind = 'X-Request-Id'
-	req = urllib.request.Request(url)
-	with urllib.request.urlopen(req) as response:
-		header_info = response.info()
-		print(header_info['X-Request-Id'])
+    url = argv[1]
+    header_tofind = 'X-Request-Id'
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(req) as response:
+        header_info = response.info()
+        print(header_info['X-Request-Id'])
