@@ -16,10 +16,10 @@ if __name__ == "__main__":
         output = r.json()
         count = output.get('count')
         results = output.get('results')
-        print("Number of results: {:d}".format(count))
+        print("Number of results: {}".format(count))
         for names in results:
             print(names.get("name"))
-        while output.get('next'):
+        while output.get('next') is not None:
             r = requests.get(output.get('next'))
             output = r.json()
             results = output.get('results')
