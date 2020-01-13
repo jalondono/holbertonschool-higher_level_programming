@@ -8,7 +8,8 @@ if __name__ == "__main__":
     repo_name = argv[1]
     owner_name = argv[2]
     param = {"per_page": "10"}
-    url = "https://api.github.com/repos/" + owner_name + "/" + repo_name + "/commits"
+    url = "https://api.github.com/repos/" + owner_name +\
+          "/" + repo_name + "/commits"
     response = requests.get(url, params=param)
     output = response.json()
     for commit in output:
