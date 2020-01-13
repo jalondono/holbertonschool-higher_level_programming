@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import urllib.request
 from sys import argv
 """Python script that takes in a URL

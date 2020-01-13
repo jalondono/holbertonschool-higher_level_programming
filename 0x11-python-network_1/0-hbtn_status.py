@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import urllib.request
 """Write a Python script that
 fetches https://intranet.hbtn.io/status"""
