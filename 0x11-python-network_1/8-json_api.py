@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == "__main__":
     letter = ""
-    if not argv[1]:
+    if len(argv) != 2:
         print("No result")
     else:
         letter = argv[1]
