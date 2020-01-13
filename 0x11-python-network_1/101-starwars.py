@@ -12,14 +12,13 @@ if __name__ == "__main__":
     output = r.json()
     count = output.get('count')
     results = output.get('results')
+    print("Number of results: {:d}".format(count))
+    print()
     for names in results:
-        list_names.append(names['name'])
+        print(names['name'])
     while output.get('next'):
         r = requests.get(output.get('next'))
         output = r.json()
         results = output.get('results')
         for names in results:
-            list_names.append(names['name'])
-    print("Number of results: {:d}".format(count))
-    for name in list_names:
-        print(name)
+            print(names['name'])
