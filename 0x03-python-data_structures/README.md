@@ -1,22 +1,32 @@
-# holbertonschool-higher_level_programming
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
+# 0x03. Python - Data Structures: Lists, Tuples
+---
+## Description
+* Why Python programming is awesome (dont forget to tweet today, with the hashtag #pythoniscool :))
+* What are lists and how to use them
+* What are the differences and similarities between strings and lists
+* What are the most common methods of lists and how to use them
+* How to use lists as stacks and queues
+* What are list comprehensions and how to use them
+* What are tuples and how to use them
+* When to use tuples versus lists
+* What is a sequence
+* What is tuple packing
+* What is sequence unpacking
+* What is the del statement and how to use i
+---
+File | Task
+---|---
+0-print_list_integer.py | Write a function that prints all integers of a list.
+1-element_at.py | function that retrieves an element from a list like in C.
+2-replace_in_list.py | function that replaces an element of a list at a specific position (like in C)
+3-print_reversed_list_integer.py | Prints all integers of a list, in reverse order
+4-new_in_list.py | Replaces an element in a list at a specific position without modifying the original list
+5-no_c.py | Removes all characters c and C from a string
+6-print_matrix_integer.py | Prints a matrix of integers
+7-add_tuple.py | Adds 2 tuples
+8-multiple_returns.py | Returns a tuple with the length of a string and its first character
+9-max_integer.py | Finds the biggest integer of a list
+10-divisible_by_2.py | Finds all multiples of 2 in a list
+11-delete_at.py | Deletes the item at a specific position in a list
+12-switch.py | Switch value of a and b
+13-is_palindrome.c | Checks if a singly linked list is a palindrome
