@@ -1,22 +1,21 @@
-# holbertonschool-higher_level_programming
-The Zen of Python, by Tim Peters
+# 0x02. Python - import & modules
+---
+## Description
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
+This project in the High Level Programming series is about:
+* How to import functions from another file
+* How to use imported functions
+* How to create a module
+* How to use the built-in function dir()
+* How to prevent code in your script from being executed when imported
+* How to use command line arguments with your Python programs
+
+---
+File|Task
+---|---
+0-add.py | Imports a function from a file and prints the results of the addition of 1 + 2 = 3
+1-calculation.py | Imports functions from a file, does some math and prints the results
+2-args.py | Prints the number arguments and the list of its arguments
+3-infinite_add.py | Prints the result of the addition of all arguments
+4-hidden_discovery.py | Prints all the names defined by a specified compiled module
+5-variable_load.py | Imports a variable from a file and print its value
