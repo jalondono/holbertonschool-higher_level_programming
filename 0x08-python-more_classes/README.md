@@ -1,22 +1,34 @@
-# holbertonschool-higher_level_programming
-The Zen of Python, by Tim Peters
+# 0x08. Python - More Classes and Objects
+---
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
+<img align="center" src="https://www.guru99.com/images/uploads/2012/06/Java_Abstract.png" width="40%"/>
+
+## Description
+
+This project in the High Level Programming series is about:
+* Why Python programming is awesome (dont forget to tweet today, with the hashtag #pythoniscool :))
+* What is OOP
+* first-class everything
+* What is a class
+* What is an object and an instance
+* What is the difference between a class and an object or instance
+* What is an attribute
+* What are and how to use public, protected and private attributes
+* What is self
+* What is a method
+* What is the special __init__ method and how to use it
+* What is Data Abstraction, Data Encapsulation, and Information Hiding
+* What is a property
+* What is the difference between an attribute and a property in Python
+* What is the Pythonic way to write getters and setters in Python
+* What are the special __str__ and __repr__ methods and how to use them
+* What is the difference between __str__ and __repr__
+* What is a class attribute
+* What is the difference between a object attribute and a class attribute
+* What is a class method
+* What is a static method
+* How to dynamically create arbitrary new attributes for existing instances of a class
+* How to bind attributes to object and classes
+* What is and what does contain __dict__ of a class and of an instance of a class
+* How does Python find the attributes of an object or class
+* How to use the getattr function
