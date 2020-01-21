@@ -1,22 +1,22 @@
-# holbertonschool-higher_level_programming
-The Zen of Python, by Tim Peters
+# 0x07. Python - Test-driven development
+---
+## Description
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
+This project in the High Level Programming series is about:
+* What is an interactive test
+* Why are tests important
+* How to write docstrings and create tests
+* How to write documentation for modules and functions
+* What are the basic option flags to create tests
+* How to find edge cases
+
+---
+File|Task
+---|---
+0-add_integer.py | Function that adds 2 integers
+2-matrix_divided.py | Divides all elements of a matrix
+3-say_my_name.py | Prints My name is followed by a first and a last name
+4-print_square.py | Prints a square using the # character
+5-text_indentation.py | Prints text with 2 new lines after .?:
+6-max_integer.py | Finds the max integer in a list
+tests | Test cases for all functions
