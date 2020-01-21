@@ -1,22 +1,35 @@
-# holbertonschool-higher_level_programming
-The Zen of Python, by Tim Peters
+# 0x0C. Python - Almost a circle
+---
+## Description
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
+This project in the High Level Programming series is about:
+* Unit testing and how to implement it in a large project
+* How to serialize and deserialize a Class
+* How to write and read a JSON file
+* What is *args and how to use it
+* What is **kwargs and how to use it
+* How to handle named arguments in a function
+
+## Files
+---
+File|Task
+---|---
+models/base.py | A class called `Base` that other classes can inherit from
+models/rectangle.py | A class called `Rectangle` that inherits from `Base`
+models/square.py | A class called `Square` that inherits from `Rectangle`
+models/\_\_init\_\_.py | Blank init file that makes the directory a module
+tests/\_\_init\_\_.py | Blank init file that makes the directory a module
+tests/test_models/\_\_init\_\_.py | Blank init file that makes the directory a module
+tests/test_models/test_base.py | Contains test cases for `base.py`
+tests/test_models/test_rectangle.py | Contains test cases for `rectangle.py`
+tests/test_models/test_square.py | Contains test cases for `square.py`
+
+
+## Directories
+---
+Directory Name | Description
+---|---
+main/ | Main files for all functions
+tests/ | Contains a directory for testing models
+tests/test_models/ | Contains all files that are used to test the models
+models/ | Contains all the model files
