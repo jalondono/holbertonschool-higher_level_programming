@@ -1,22 +1,24 @@
-# holbertonschool-higher_level_programming
-The Zen of Python, by Tim Peters
+# 0x05. Python - Exceptions
+---
+## Description
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
+This project in the High Level Programming series is about:
+* The difference between errors and exceptions
+* What are exceptions and how to use them
+* When do we need to use exceptions
+* Correctly handling an exception
+* The purpose of catching exceptions
+* How to raise a builtin exception
+* When to implement a clean-up action after an exception
+
+
+---
+File|Task
+---|---
+0-safe_print_list.py | Function that prints x elements of a list
+1-safe_print_integer.py | Prints an integer with \"{:d}\".format()
+2-safe_print_list_integers.py | Prints first x element of a list & only integers
+3-safe_print_division.py | Divides 2 integers and prints the result
+4-list_division.py | Divides element by element 2 lists
+5-raise_exception.py | Raises a type exception
+6-raise_exception_msg.py | Raises a name exception with a message
