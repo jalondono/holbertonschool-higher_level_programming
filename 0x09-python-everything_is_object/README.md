@@ -1,22 +1,25 @@
-# holbertonschool-higher_level_programming
-The Zen of Python, by Tim Peters
+# 0x09. Python - Everything is object
+---
+## Description
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
+This project in the High Level Programming series is about:
+* OOP
+* What is an object
+* What the difference is between a class and an object or instance
+* What the difference is between immutable object and mutable object
+* What is a reference
+* What is an assignment
+* What is an alias
+* How to know if two variables are identical
+* How to know if two variables are linked to the same object
+* How to display the variable identifier in CPython
+* What is a mutable object
+* What is an immutable object
+* What are builtin mutable types
+* What are builtin immutable types
+* How does Python pass variables to functions
+
+
+## Everything is an object
+
+The files in this repo are answers to questions about Object Oriented Programming in Python.
