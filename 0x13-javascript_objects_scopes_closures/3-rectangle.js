@@ -10,11 +10,11 @@ class Rectangle {
   print () {
     let i = 0;
     let j = 0;
-    let letter = 'x';
+    let letter = 'X';
     for (i = 0; i < this.height; i++) {
       letter = '';
       for (j = 0; j < this.width; j++) {
-        letter += 'x';
+        letter += 'X';
       }
       console.log(letter);
     }
